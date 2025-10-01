@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Miriam Nohemí Zárate Rosas — Portafolio</title>
+  <meta name="description" content="Portafolio profesional de Miriam Nohemí Zárate Rosas: desarrollo web y móvil con Angular, Ionic, Java para Android, MySQL, PHP y Firebase." />
+  <meta name="theme-color" content="#0b5fff" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Miriam Nohemí Zárate Rosas — Portafolio" />
+  <meta property="og:description" content="Desarrollo web y móvil (Angular, Ionic, Java para Android, MySQL, PHP, Firebase)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+
+  <!-- JSON-LD Person + Portfolio -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Miriam Nohemí Zárate Rosas",
+    "jobTitle": "Desarrolladora de Software (Web & Móvil)",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Córdoba",
+      "addressRegion": "Veracruz",
+      "addressCountry": "MX"
+    },
+    "email": "mailto:mirizar46@gmail.com",
+    "telephone": "+52-271-690-6461",
+    "url": "https://example.com"
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Modal de video reutilizable -->
+  <div class="modal" id="videoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Reproductor de video">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" type="button" aria-label="Cerrar video" data-close>✕</button>
+      <div class="modal__content">
+        <!-- El video se inyecta por JS -->
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Principal">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">Miriam Zárate</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu">Menú</button>
+      <ul id="menu" class="menu" role="menubar">
+        <li role="none"><a role="menuitem" href="#perfil">Perfil</a></li>
+        <li role="none"><a role="menuitem" href="#habilidades">Habilidades</a></li>
+        <li role="none"><a role="menuitem" href="#stack">Stack</a></li>
+        <li role="none"><a role="menuitem" href="#experiencia">Experiencia</a></li>
+        <li role="none"><a role="menuitem" href="#formacion">Formación</a></li>
+        <li role="none"><a role="menuitem" href="#proyectos">Proyectos</a></li>
+        <li role="none"><a role="menuitem" href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <section id="inicio" class="hero" aria-labelledby="titulo-hero">
+      <div class="hero__content">
+        <h1 id="titulo-hero">Miriam Nohemí Zárate Rosas</h1>
+        <p class="hero__role">Desarrolladora de Software — Web & Móvil</p>
+        <p class="hero__intro">
+          Construyo soluciones funcionales y amigables con <strong>Angular</strong>, <strong>Ionic</strong>, 
+          <strong>Java para Android</strong>, <strong>MySQL</strong>, <strong>PHP</strong> y <strong>Firebase</strong>.
+        </p>
+        <div class="cta">
+          <a class="btn btn--primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn" href="#contacto">Contactar</a>
+        </div>
+      </div>
+      <figure class="hero__media" aria-hidden="true">
+        <img src="assets/profile-placeholder.png" alt="" />
+      </figure>
+    </section>
+  </header>
+
+  <main id="contenido" class="container" role="main">
+    <!-- PERFIL -->
+    <section id="perfil" class="section">
+      <h2>Perfil</h2>
+      <p>
+        Soy una persona trabajadora, comunicativa y amable, con alta capacidad de aprendizaje y adaptación. 
+        Busco integrarme a equipos donde pueda aportar a la calidad del producto y al cumplimiento de objetivos, 
+        aplicando prácticas ordenadas y orientadas al usuario final.
+      </p>
+      <ul class="badges" aria-label="Aptitudes">
+        <li>Adaptabilidad</li>
+        <li>Trabajo en equipo</li>
+        <li>Aprendizaje continuo</li>
+        <li>Empatía</li>
+        <li>Comunicación</li>
+      </ul>
+      <!-- Fuente: CV cargado por el usuario. :contentReference[oaicite:0]{index=0} -->
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="section">
+      <h2>Habilidades Clave</h2>
+      <div class="skills">
+        <article class="skill">
+          <h3>Frontend</h3>
+          <ul>
+            <li>Angular (componentes, routing, RxJS básico, formularios)</li>
+            <li>Ionic (UI móvil, Capacitor, despliegue híbrido)</li>
+            <li>HTML5, CSS3, Accesibilidad (WAI-ARIA)</li>
+          </ul>
+        </article>
+        <article class="skill">
+          <h3>Backend</h3>
+          <ul>
+            <li>PHP (APIs REST, MVC básico)</li>
+            <li>Firebase Functions (Node.js) — opcional según proyecto</li>
+          </ul>
+        </article>
+        <article class="skill">
+          <h3>Móvil</h3>
+          <ul>
+            <li>Java para Android (Activities, Intents, RecyclerView)</li>
+            <li>Ionic + Capacitor (Android build)</li>
+          </ul>
+        </article>
+        <article class="skill">
+          <h3>Datos & Cloud</h3>
+          <ul>
+            <li>MySQL (modelado, consultas, procedimientos)</li>
+            <li>Firebase (Auth, Firestore/RTDB, Storage, Hosting)</li>
+          </ul>
+        </article>
+        <article class="skill">
+          <h3>Calidad & Flujo</h3>
+          <ul>
+            <li>Buenas prácticas, control de versiones (Git)</li>
+            <li>Pruebas básicas y documentación</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- STACK TECNOLÓGICO -->
+    <section id="stack" class="section">
+      <h2>Stack Tecnológico</h2>
+      <div class="stack-grid" role="list">
+        <div role="listitem" class="stack-item">
+          <img src="assets/logos/angular.svg" alt="Angular" />
+          <h3>Angular</h3>
+          <p>SPA modulares, componentes reutilizables y formularios reactivos con RxJS.</p>
+        </div>
+        <div role="listitem" class="stack-item">
+          <img src="assets/logos/ionic.svg" alt="Ionic" />
+          <h3>Ionic</h3>
+          <p>Experiencias móviles híbridas con Capacitor y despliegue en Android.</p>
+        </div>
+        <div role="listitem" class="stack-item">
+          <img src="assets/logos/android.svg" alt="Java para Android" />
+          <h3>Java para Android</h3>
+          <p>Apps nativas: UI con Views/RecyclerView, navegación y persistencia ligera.</p>
+        </div>
+        <div role="listitem" class="stack-item">
+          <img src="assets/logos/mysql.svg" alt="MySQL" />
+          <h3>MySQL</h3>
+          <p>Esquemas normalizados, consultas eficientes y procedimientos almacenados.</p>
+        </div>
+        <div role="listitem" class="stack-item">
+          <img src="assets/logos/php.svg" alt="PHP" />
+          <h3>PHP</h3>
+          <p>Servicios REST y backends ligeros para integraciones con front y móvil.</p>
+        </div>
+        <div role="listitem" class="stack-item">
+          <img src="assets/logos/firebase.svg" alt="Firebase" />
+          <h3>Firebase</h3>
+          <p>Auth, base de datos en tiempo real/Firestore, Storage y Hosting.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section id="experiencia" class="section">
+      <h2>Experiencia</h2>
+      <article class="job">
+        <header>
+          <h3>Inspectora de Calidad — BOLIM SLT</h3>
+          <p class="meta">Saltillo, Coahuila · Abril 2018 — Octubre 2020</p>
+        </header>
+        <ul>
+          <li>Supervisión de cumplimiento de normas de seguridad y calidad.</li>
+          <li>Monitoreo de líneas de producción y verificación de productos.</li>
+          <li>Documentación de inspecciones y gestión de registros.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <header>
+          <h3>Inspectora de Incoming — BOLIM SLT</h3>
+          <p class="meta">Saltillo, Coahuila</p>
+        </header>
+        <ul>
+          <li>Recepción e inspección de materiales y control de inventarios.</li>
+          <li>Gestión de discrepancias y comunicación con proveedores.</li>
+          <li>Cumplimiento de normativas y manejo de devoluciones.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <header>
+          <h3>Promotora de Café</h3>
+          <p class="meta">Fortín, Veracruz · Junio — Julio 2024</p>
+        </header>
+        <ul>
+          <li>Atención a clientes, demostraciones y degustaciones.</li>
+          <li>Organización de exhibidores y reporte de ventas.</li>
+          <li>Participación en ferias y eventos de marca.</li>
+        </ul>
+      </article>
+      <!-- Fuente: CV cargado por el usuario. :contentReference[oaicite:1]{index=1} -->
+    </section>
+
+    <!-- FORMACIÓN -->
+    <section id="formacion" class="section">
+      <h2>Formación</h2>
+      <article class="edu">
+        <h3>TSU en Tecnologías de la Información — Desarrollo de Software Multiplataforma</h3>
+        <p class="meta">Universidad Tecnológica del Centro de Veracruz · 2021 — 2024</p>
+      </article>
+
+      <article class="edu">
+        <h3>Ingenieria en Desarrollo y Gestión de Software</h3>
+        <p class="meta">Universidad Tecnológica del Centro de Veracruz · 2024 - 2025</p>
+      </article>
+      <!-- Fuente: CV cargado por el usuario. :contentReference[oaicite:2]{index=2} -->
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section">
+      <h2>Trabajos y Proyectos Destacados</h2>
+
+      <div class="projects-grid" role="list">
+        <!-- WEB 1 -->
+        <article role="listitem" class="project-card" data-type="web">
+          <figure class="project-card__media">
+            <img src="assets/projects/cardiapp-web.png" alt="Vista previa CARDIAPP" />
+          </figure>
+          <div class="project-card__body">
+            <h3>CARDIAPP</h3>
+            <p>Plataforma de telemetría e inteligencia artificial para la detección temprana de la Insuficiencia Cardiaca</p>
+            <div class="tags"><span>Angular</span><span>Firebase</span><span>IA</span></div>
+            <div class="actions">
+              <button class="btn btn--ghost"
+                      data-demo
+                      data-video="assets/projects/videos/cardia.mp4"
+                      aria-label="Reproducir demo de CARDIAPP">Demo</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- WEB 2 -->
+        <article role="listitem" class="project-card" data-type="web">
+          <figure class="project-card__media">
+            <img src="assets/projects/escolar.png" alt="Vista previa CARMEN" />
+          </figure>
+          <div class="project-card__body">
+            <h3>CARMEN</h3>
+            <p>Sistema de cobro y seguimiento escolar administrativo para una institución privada escolar</p>
+            <div class="tags"><span>Angular</span><span>Firebase</span><span>MySQL</span></div>
+            <div class="actions">
+              <button class="btn btn--ghost"
+                      data-demo
+                      data-video="assets/projects/videos/escolar.mp4"
+                      aria-label="Reproducir demo de CARMEN">Demo</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- WEB 3 -->
+        <article role="listitem" class="project-card" data-type="web">
+          <figure class="project-card__media">
+            <img src="assets/projects/fergies.png" alt="Vista previa FERGIES Cosmetic" />
+          </figure>
+          <div class="project-card__body">
+            <h3>FERGIES Cosmetic</h3>
+            <p>PWA dedicada a la venta de artículos para damas de una tienda local usando Ionic con PHP.</p>
+            <div class="tags"><span>PHP</span><span>Ionic</span><span>MySQL</span></div>
+            <div class="actions">
+              <button class="btn btn--ghost"
+                      data-demo
+                      data-video="assets/projects/videos/fergies.mp4"
+                      aria-label="Reproducir demo de FERGIES Cosmetic">Demo</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ANDROID -->
+        <article role="listitem" class="project-card" data-type="android">
+          <figure class="project-card__media">
+            <img src="assets/projects/cardia-movil.png" alt="Vista previa Cardia Móvil" />
+          </figure>
+          <div class="project-card__body">
+            <h3>Cardia Móvil</h3>
+            <p>Aplicación móvil nativa Android para la plataforma CARDIAPP integrando sensores.</p>
+            <div class="tags"><span>Android</span><span>Java</span></div>
+            <div class="actions">
+              <button class="btn btn--ghost"
+                      data-demo
+                      data-video="assets/projects/videos/cardia_movil.mp4"
+                      aria-label="Reproducir demo de Cardia Móvil">Demo</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Nota: Puedes duplicar/editar las tarjetas; el atributo data-type te permite filtrar en main.js -->
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section">
+      <h2>Contacto</h2>
+      <ul class="contact">
+        <li><strong>Email:</strong> <a href="mailto:mirizar46@gmail.com">mirizar46@gmail.com</a></li>
+        <li><strong>Teléfono (principal):</strong> <a href="tel:+522716906461">+52 271 690 6461</a></li>
+        <li><strong>Teléfono (alterno):</strong> <a href="tel:+528441637950">+52 844 163 7950</a></li>
+        <li><strong>Ubicación:</strong> Córdoba, Veracruz, México</li>
+      </ul>
+
+      <form class="contact-form" name="contacto" aria-label="Formulario de contacto" netlify>
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="correo">Correo</label>
+          <input id="correo" name="correo" type="email" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        </div>
+        <button class="btn btn--primary" type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; <span id="year"></span> Miriam Nohemí Zárate Rosas. Todos los derechos reservados.</p>
+    <p class="footnote">
+      UTCV. <!-- :contentReference[oaicite:3]{index=3} -->
+    </p>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
